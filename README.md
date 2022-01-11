@@ -17,6 +17,9 @@ Our wiki offers in-depth documentation for various aspects of our project.
 ##### [Contributing Guidelines](https://github.com/yajatyadav/intellijs/wiki/Contributing-Guidelines)
 ##### [Project Theme + Technicals](https://github.com/yajatyadav/intellijs/wiki/Project-Theme---Technicals)
 
+### Jekyll Site
+[Link to site](https://kylem314.github.io/)
+
 ### Week 3 (12/13-12/17) About pages + Unit 3 FRQ
 [Review ticket](https://github.com/yajatyadav/intellijs/issues/10)
 Name | Link to code | Link to page |
