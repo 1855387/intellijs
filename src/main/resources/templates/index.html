@@ -18,8 +18,21 @@
     <a href="/home" class="navbar__logo">SECRET</a>
     <div class="navbar__bars"><i class="fas fa-bars"></i></div>
     <div class="navbar__menu">
-        <a href="/" class="navbar__menu--links">Home</a>
-        <a href="/" class="navbar__menu--links">Products</a>
+
+<!--        <li class="nav-item dropdown">-->
+<!--            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink0" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                College Pages-->
+<!--            </a>-->
+<!--            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">-->
+<!--                <li><a class="dropdown-item" th:href="@{/database/college_list}"> My College List</a></li>-->
+<!--                <li><a class="dropdown-item" th:href="@{/database/college_add}">Add a College</a></li>-->
+<!--                <li><a class="dropdown-item" th:href="@{/database/college_update}">Update/Delete a College</a></li>-->
+<!--                <li><a class="dropdown-item" th:href="@{/database/college_search}">Search your College List</a></li>-->
+
+<!--            </ul>-->
+<!--        </li>-->
+
+        <a th:href="@{/database/college_list}" class="navbar__menu--links">My College List</a>
         <a href="/" class="navbar__menu--links">Services</a>
         <a href="/" class="navbar__menu--links" id="button">Sign Up</a>
     </div>

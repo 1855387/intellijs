@@ -7,7 +7,7 @@
 
 <!-- <head> -->
 <div layout:fragment="head" th:remove="tag">
-    <title>College Update</title>
+    <title>College Delete</title>
 </div>
 
 <!-- <body> -->
@@ -16,29 +16,15 @@
     <div class="container">
 
         <div class="row justify-content-md-center">
-            <h2>Update College Details</h2>
+            <h2>Delete College</h2>
         </div>
 
         <div class="row justify-content-md-center">
             <div class="col8">
                 <div class="jumbotron">
-                    <h3>Update College</h3>
-                    <!-- ThymeLeaf allows person abject of the Class Person to be acted upon by the form
-                         This is known as a “bean-backed form” or "form-backing bean".
-                            th:object - the backend form object (bean object)
-                         There are two fields in the Person bean,
-                            th:field="*{name}"
-                            th:field="*{age}".
-                         Each field has supporting line for to show errors in validation
-                            th:errors - form input errors added when validation errors occur
-                         Reference for CRUD
-                            https://www.baeldung.com/spring-boot-crud-thymeleaf
-                         Get started with dialects in 5 minutes
-                            https://www.thymeleaf.org/doc/articles/standarddialect5minutes.html
-                         Reference Bootstrap Form
-                            https://getbootstrap.com/docs/4.0/components/forms/#readonly-plain-text
-                     -->
-                    <form class="form-inline" action="#" th:action="@{update_college}" th:object="${college}" method="POST">
+                    <h3>Delete College</h3>
+
+                    <form class="form-inline" action="#" th:action="@{/database/college_delete}" th:object="${college}" method="POST">
                         <div class="form-group mb-2 mr-sm-2">
                             <label for="id">ID:</label>
                             <input type="text" th:field="*{id}" id="id" readonly class="form-control-plaintext" >
