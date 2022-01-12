@@ -25,5 +25,18 @@ public class Unit5CZ {
         String newaddress = newAddress;
         return newaddress;
     }
+    public String whoInvited( String personInvited){
+        String personInvited1 = personInvited;
+        String greeting = "Dear " + personInvited1 + ", please attend my event at " + address + ". See you then, " + hostName;
+        return greeting;
+    }
+    public Unit5CZ(String address)
 
+    {
+
+        String address1 = address;
+
+        hostName = "Host";
+
+    }
 }
