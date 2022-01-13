@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.nighthawk</groupId>
-    <artifactId>csa</artifactId>
+    <artifactId>intellijs</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>csa</name>
+    <name>intellijs</name>
     <description>CSA project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>
