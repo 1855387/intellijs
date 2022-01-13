@@ -24,7 +24,7 @@
     </div>
 
     <div class="row justify-content-md-center">
-      <a th:href="@{/database/college_add}">Add College</a>
+      <a class="btn btn-primary" th:href="@{/database/college_add}"role="button">Add College</a>
     </div>
 
     <table class="table table-bordered">
@@ -71,15 +71,15 @@
 
           #myInput {
             background-color: #fff;
-            background-position: 50px 12px;
+
             background-repeat: no-repeat;
             width: 150%;
-            font-family: "ui-rounded Text";
+
             font-size: 16px;
             font-color: #fff;
             padding: 12px 20px 12px 40px;
             border: 1px solid #ddd;
-            margin-bottom: 0px;
+
             text-align:center;
           }
 
@@ -113,7 +113,16 @@
         </br>
         <h2 style="text-align:center; font-family:'Javanese Text'";> College Admission Game:FAQ</h2>
         </br>
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for topic" title="Type in a topic">
+        <div class="input-group rounded">
+          <input type="search" onkeyup="myFunction()" class="form-control rounded" placeholder="Search for topic" aria-label="Search"
+                 aria-describedby="search-addon" id="hello" />
+          <span class="input-group-text border-0" id="search-addon">
+    <i class="fas fa-search"></i>
+  </span>
+        </div>
+<!--        <div class="container-fluid">-->
+<!--          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for topic" title="Type in a topic">-->
+<!--        </div>-->
 
         <ul id="myUL">
           <li><a href="https://www.youtube.com/watch?v=k9TdGU5ZSJ8&ab_channel=BestCollegeAid">GPA - What is a good GPA? </a></li>
@@ -128,7 +137,7 @@
         <script>
           function myFunction() {
             var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById("myInput");
+            input = document.getElementById("hello");
             filter = input.value.toUpperCase();
             ul = document.getElementById("myUL");
             li = ul.getElementsByTagName("li");
