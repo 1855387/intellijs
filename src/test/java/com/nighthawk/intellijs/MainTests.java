@@ -1,4 +1,4 @@
-package com.nighthawk.csa;
+package com.nighthawk.intellijs;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
