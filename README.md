@@ -2,6 +2,7 @@
 
 
 ## Scrum Team Members and Contributions
+
 m221p1-youre-mom   | [Scrum Board](https://github.com/yajatyadav/intellijs/projects/1) | [Repo Contributors](https://github.com/yajatyadav/intellijs/graphs/contributors) | ------ | ------ | ------ | ------ |
 ------ | ------ | ------ | ------ | ------ | ------ | ------ |
 Name            | GitHub ID | Tasks | Scrum Board | Commits | Profile | Repl.it (FRQs) |
@@ -12,17 +13,20 @@ Eric Wang | elw55555 | [Issues](https://github.com/yajatyadav/intellijs/labels/E
 Ak Prathipati | akprathipati | [Issues](https://github.com/yajatyadav/intellijs/labels/Akshit%20Prathipati) | [Scrum Board](https://github.com/yajatyadav/intellijs/projects/1?card_filter_query=assignee%3Aakprathipati) | [Commit Page](https://github.com/yajatyadav/intellijs/commits?author=akprathipati) | [Profile](https://github.com/akprathipati) | [Add Repl]() |
 
 ## Wiki
+
 Our wiki offers in-depth documentation for various aspects of our project
 ##### [Deployment](https://github.com/yajatyadav/intellijs/wiki/Deployment)
 ##### [Contributing Guidelines](https://github.com/yajatyadav/intellijs/wiki/Contributing-Guidelines)
 ##### [Project Theme + Technicals](https://github.com/yajatyadav/intellijs/wiki/Project-Theme---Technicals)
 
 ### Jekyll Site
+
 [Link to site](https://kylem314.github.io/)
 
 ### Week 3 (12/13-12/17) About pages + Unit 3 FRQ
+
 [Review ticket](https://github.com/yajatyadav/intellijs/issues/10)
-ak was here
+
 Name | Link to code | Link to page |
 ----- | ----- | ------ |
 Kyle Myint | [Link](https://github.com/yajatyadav/intellijs/blob/main/src/main/resources/templates/kyleabout) | [Link](http://intellijs.cf/kyleabout) |
