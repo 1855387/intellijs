@@ -136,11 +136,13 @@
 
         <script>
           function myFunction() {
+            //declares the varaibles
             var input, filter, ul, li, a, i, txtValue;
             input = document.getElementById("hello");
             filter = input.value.toUpperCase();
             ul = document.getElementById("myUL");
             li = ul.getElementsByTagName("li");
+            // Loops thorught all the items and hides stuff that doesnt match
             for (i = 0; i < li.length; i++) {
               a = li[i].getElementsByTagName("a")[0];
               txtValue = a.textContent || a.innerText;
