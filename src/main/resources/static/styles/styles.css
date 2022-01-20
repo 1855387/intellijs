@@ -169,7 +169,7 @@
   border-radius: 4px;
 }
 .hero__container--btn:hover:after {
-  width: 100%;
+  width: 400%;
 }
 .hero__container--right {
   text-align: center;
