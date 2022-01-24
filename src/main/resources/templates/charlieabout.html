@@ -15,35 +15,23 @@
 
   <div style = "background: linear-gradient(#e66465, #9198e5);">
     <p style = "font-size: 30px; color:#f7f7f7;"> This is Charlie's About Me Page. A fun fact about me is that I have two cats! One is named Selene and the other is named Toby!</p>
-
-
-    <p>
-      <img alt="" th:src="@{/static/images/mountain.png}"
-           style="height: 85px; width: 198px" id="imagetochange" />
-    </p>
-
-
     <div>
-      <!--            <label>What answer did you get?</label>-->
-      <!--            <input name="name2" id="Question" placeholder="Question">-->
-      <button onclick = "image_switch()" id="button2">Click to Grayscale the Image</button>
-      <!-- test 4 -->
-    </div>
-    <script type="text/javascript">
-      function image_switch(){
-        if(document.getElementById("imagetochange").style.filter == ""){
-          document.getElementById("imagetochange").style.filter = "grayscale(100%)";
+      <a title="click to toggle!" onclick="imageSwitch(1)"><img id="image1" style="display:none" src="https://media.springernature.com/relative-r300-703_m1050/springer-static/image/art%3A10.1038%2F528452a/MediaObjects/41586_2015_Article_BF528452a_Figg_HTML.jpg" width="400px" height="400px"></a>
+      <a title="click to toggle!" onclick="imageSwitch(2)"><img id="image2" style="display:inline" src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" width="400px" height="400px"></a></div>
+    <script>
+      function imageSwitch(type)
+      {
+        if(type===1) {
+          document.getElementById('image1').style.display = 'none';
+          document.getElementById('image2').style.display = 'inline';
         }
-        else{
 
-          document.getElementById("imagetochange").style.filter = ""
-
+        if(type===2) {
+          document.getElementById('image2').style.display = 'none';
+          document.getElementById('image1').style.display = 'inline';
         }
       }
-
-
     </script>
-
     <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@CharlieZhu2/CSA-FRQs?lite=true"></iframe>
 
     <div>
