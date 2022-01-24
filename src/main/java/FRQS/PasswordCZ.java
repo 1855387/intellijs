@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class PasswordCZ {
 
-
     private static Random random = new Random();
 
     private String prefix;
