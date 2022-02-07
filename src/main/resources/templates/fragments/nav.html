@@ -4,7 +4,7 @@
 <th:block xmlns:th="http://www.w3.org/1999/xhtml" th:fragment="header">
     <link rel="stylesheet" href="/styles/nav_style.css" />
     <nav class="navbar">
-        <a href="/home" class="navbar__logo">SECRET</a>
+        <a href="/" class="navbar__logo">SECRET</a>
         <div class="navbar__bars"><i class="fas fa-bars"></i></div>
         <div class="navbar__menu">
 
@@ -13,10 +13,10 @@
             <a href="https://kylem314.github.io" class="navbar__menu--links">Jekyll</a>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
+                    About Us
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button class="dropdown-item" type="button">Action</button>
+                    <a class="dropdown-item" th:href = "yajat_about">Yajat About Me</a>
                     <button class="dropdown-item" type="button">Another action</button>
                     <button class="dropdown-item" type="button">Something else here</button>
                 </div>

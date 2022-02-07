@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.controllers;
+package com.nighthawk.intellijs.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

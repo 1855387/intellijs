@@ -1,0 +1,117 @@
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<div layout:fragment="head" th:remove="tag">
+    <!-- Page specific head additions -->
+    <title>College Admissions FAQ</title>
+</div>
+
+
+<!--<div layout:fragment="body" th:remove="tag">-->
+<!--    &lt;!&ndash; Start of head content specific to page &ndash;&gt;-->
+<!--    <title>Greet</title>-->
+<!--    <link rel="stylesheet" type="text/css" href="/css/greet.css">-->
+<!--    &lt;!&ndash; End of head content specific to page &ndash;&gt;-->
+<!--</div>-->
+<!--<link rel="stylesheet" href="greet.css">-->
+<!--</head>-->
+
+<div layout:fragment="body" th:remove="tag">
+    <!-- Start of body content specific to page -->
+    <style>
+        body {
+            background: none;
+        }
+        * {
+            box-sizing: border-box;
+            font-color: #fff;
+        }
+
+        #myInput {
+            background-color: #fff;
+
+            background-repeat: no-repeat;
+            width: 150%;
+
+            font-size: 16px;
+            font-color: #fff;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+
+            text-align:center;
+        }
+
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align:center;
+        }
+
+        #myUL li a {
+            border: 1px solid #ddd;
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f21dcf;
+            padding: 12px;
+            text-decoration: none;
+            font-family: "ui-rounded Text";
+            font-size: 18px;
+            color: white;
+            display: block
+        }
+
+        #myUL li a:hover:not(.header) {
+            background-color: #d563f5;
+        }
+    </style>
+
+    <h2 style="text-align:center; font-family:'Javanese Text'";> College Admission Game:FAQ</h2>
+    </br>
+    <div class="input-group rounded">
+        <input type="search" onkeyup="myFunction()" class="form-control rounded" placeholder="Search for topic" aria-label="Search"
+               aria-describedby="search-addon" id="hello" />
+        <span class="input-group-text border-0" id="search-addon">
+    <i class="fas fa-search"></i>
+  </span>
+    </div>
+    <!--        <div class="container-fluid">-->
+    <!--          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for topic" title="Type in a topic">-->
+    <!--        </div>-->
+
+    <ul id="myUL">
+        <li><a href="https://www.youtube.com/watch?v=k9TdGU5ZSJ8&ab_channel=BestCollegeAid">GPA - What is a good GPA? </a></li>
+        <li><a href="https://www.youtube.com/watch?v=F7CHww0JeUY&ab_channel=SupertutorTV">Navigation of UC - PIQS+EC's+GPA? </a></li>
+        <li><a href="https://www.youtube.com/watch?v=RSLp47l-zZ8&ab_channel=VictorLai">Ivies - What it takes </a></li>
+        <li><a href="https://www.youtube.com/watch?v=kWhbz6mSJOA&ab_channel=ConquerCollegeAdmissions">Passion Project - How to build a project with passion </a></li>
+        <li><a href="https://www.youtube.com/watch?v=KynMm9ucC94&ab_channel=AlexisChoi">Internships - How to get it with no experience ? </a></li>
+
+
+    </ul>
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("hello");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    <!-- End of body content specific to page -->
+</div></body>
+</table>
+</body>
+</html>

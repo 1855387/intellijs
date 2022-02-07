@@ -110,7 +110,7 @@ public class Yajatjava {
 
         JSONObject current = (JSONObject) jo.get("current");
 
-        System.out.println(current.get("uv"));
+        System.out.println(current.get("temp_f").getClass().getSimpleName());
 
 
 //
