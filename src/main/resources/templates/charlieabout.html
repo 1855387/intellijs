@@ -1,214 +1,97 @@
-<!-- This page is illustrative and contains ideas about HTML formatting -->
 <!DOCTYPE HTML>
-<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
-<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
 
-
 <div layout:fragment="head" th:remove="tag">
-  <title>Charlie's Page</title>
+  <!-- Start of head content specific to page -->
+  <title>About Charlie Zhu</title>
+  <!-- End of head content specific to page -->
 </div>
 
-  <div layout:fragment="body" th:remove="tag">
+
+
+<div layout:fragment="body" th:remove="tag">
+
+  <div style = "background: linear-gradient(#e66465, #9198e5);">
+    <p style = "font-size: 30px; color:#f7f7f7;"> This is Charlie's About Me Page. A fun fact about me is that I have two cats! One is named Selene and the other is named Toby!</p>
+    <div>
+      <a title="click to toggle!" onclick="imageSwitch(1)"><img id="image1" style="display:none" src="https://media.springernature.com/relative-r300-703_m1050/springer-static/image/art%3A10.1038%2F528452a/MediaObjects/41586_2015_Article_BF528452a_Figg_HTML.jpg" width="400px" height="400px"></a>
+      <a title="click to toggle!" onclick="imageSwitch(2)"><img id="image2" style="display:inline" src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" width="400px" height="400px"></a></div>
+    <script>
+      function imageSwitch(type)
+      {
+        if(type===1) {
+          document.getElementById('image1').style.display = 'none';
+          document.getElementById('image2').style.display = 'inline';
+        }
+
+        if(type===2) {
+          document.getElementById('image2').style.display = 'none';
+          document.getElementById('image1').style.display = 'inline';
+        }
+      }
+    </script>
+    <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@CharlieZhu2/CSA-FRQs?lite=true"></iframe>
+
+    <div>
+      <p style = "font-size: 30px; color:rgba(170,0,255,0.94); text-align:center;">Charlie's FRQs</p>
+      Question 1
+      <p (1a) </br>
+        if(rsvp){</br>
+        System.out.println("attending");</br>
+        }else if{</br>
+        System.out.println("not attending");</br>
+        }</br>
+        (1b)</br>
+        if(selection == 1){</br>
+        System.out.println("beef");</br>
+        }else if(selection == 2){</br>
+        System.out.println("chicken");</br>
+        }else if(selection == 3){</br>
+        System.out.println("pasta");</br>
+        }else{</br>
+        System.out.println("fish");</br>
+        }</br>
+        (1c)</br>
+        if(rsvp == false){</br>
+        option1 = "Sorry you can't make it.";</br>
+        }else if(rsvp){</br>
+        if(selection == 1){</br>
+        option1 = "Thanks for attending. You will be served beef.";</br>
+        }else if(selection == 2){</br>
+        option1 = "Thanks for attending. You will be served chicken.";</br>
+        }else if(selection == 3){</br>
+        option1 = "Thanks for attending. You will be served pasta.";</br>
+        }else{</br>
+        option1 = "Thanks for attending. You will be served fish.";</br>
+        }}</br>
+        (1d)</br>
+        if(option1.equals(option2)){</br>
+        System.out.println("true");</br>
+        }else{</br>
+        System.out.println("false");</br>
+        }</br>
+      </p>
+
+
+
+
+    </div>
+
+
+
+
+
+
   </div>
-<h2 class="sectionTitle">Unit 2 FRQ's</h2>
-<div class="sectionText">
-  <p>(a) </br>
-    LightSequence gradShow = new LightSequence("0101 0101 0101");</br>
-    (b)</br>
-    gradShow.display();</br>
-    (c)</br>
-    gradShow.changeSequence("0011 0011 0011");</br>
-    (d)</br>
-    resultSeq = gradShow.insertSegment("1111 1111", 4);</br>
-    (e)</br>
-    int IndexOF = oldSeq.indexOf(segment);</br>
-    String newSeq = oldSeq.substring(0, IndexOF) + oldSeq.substring(IndexOF + segment.length());</br>
-    (f)</br>
-    aSquared = a * a</br>
-    bSquared = b * b</br>
-    System.out.println(Math.sqrt(aSquared + bSquared));</br>
-  </p>
+
+  <!-- End of body content specific to page -->
+
+
+
 </div>
 
-<h2 class="sectionTitle">Unit 3 FRQ's</h2>
-<div class="sectionText">
-  <p>(1a) </br>
-    if(rsvp){</br>
-    System.out.println("attending");</br>
-    }else if{</br>
-    System.out.println("not attending");</br>
-    }</br>
-    (1b)</br>
-    if(selection == 1){</br>
-    System.out.println("beef");</br>
-    }else if(selection == 2){</br>
-    System.out.println("chicken");</br>
-    }else if(selection == 3){</br>
-    System.out.println("pasta");</br>
-    }else{</br>
-    System.out.println("fish");</br>
-    }</br>
-    (1c)</br>
-    if(rsvp == false){</br>
-    option1 = "Sorry you can't make it.";</br>
-    }else if(rsvp){</br>
-    if(selection == 1){</br>
-    option1 = "Thanks for attending. You will be served beef.";</br>
-    }else if(selection == 2){</br>
-    option1 = "Thanks for attending. You will be served chicken.";</br>
-    }else if(selection == 3){</br>
-    option1 = "Thanks for attending. You will be served pasta.";</br>
-    }else{</br>
-    option1 = "Thanks for attending. You will be served fish.";</br>
-    }}</br>
-    (1d)</br>
-    if(option1.equals(option2)){</br>
-    System.out.println("true");</br>
-    }else{</br>
-    System.out.println("false");</br>
-    }</br>
-  </p>
-<div>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<style>
-  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  html,body{
-    display: grid;
-    height: 100%;
-    place-items: center;
-    text-align: center;
-    background: linear-gradient(#e66465, #9198e5);
-  }
-  .container{
-    position: relative;
-    width: 400px;
-    background: #DEB887;
-    padding: 20px 30px;
-    border: 1px solid #444;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .container .post{
-    display: none;
-  }
-  .container .text{
-    font-size: 25px;
-    color: #666;
-    font-weight: 500;
-  }
-  .container .edit{
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    font-size: 16px;
-    color: #666;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  .container .edit:hover{
-    text-decoration: underline;
-  }
-  .container .star-widget input{
-    display: none;
-  }
-  .star-widget label{
-    font-size: 40px;
-    color: #444;
-    padding: 10px;
-    float: right;
-    transition: all 0.2s ease;
-  }
-  input:not(:checked) ~ label:hover,
-  input:not(:checked) ~ label:hover ~ label{
-    color: #fd4;
-  }
-  input:checked ~ label{
-    color: #fd4;
-  }
-  input#rate-5:checked ~ label{
-    color: #fe7;
-    text-shadow: 0 0 20px #952;
-  }
-  #rate-1:checked ~ form header:before{
-    content: "Immediate update needed! ";
-  }
-  #rate-2:checked ~ form header:before{
-    content: "Lacks some features or is a little too buggy. ";
-  }
-  #rate-3:checked ~ form header:before{
-    content: "It's alright, nothing too special.";
-  }
-  #rate-4:checked ~ form header:before{
-    content: "Pretty good, but I wish there was one more thing.";
-  }
-  #rate-5:checked ~ form header:before{
-    content: "It's perfect! ";
-  }
-  .container form{
-    display: none;
-  }
-  input:checked ~ form{
-    display: block;
-  }
-  form header{
-    width: 100%;
-    font-size: 25px;
-    color: #fe7;
-    font-weight: 500;
-    margin: 5px 0 20px 0;
-    text-align: center;
-    transition: all 0.2s ease;
-  }
-  form .textarea{
-    height: 100px;
-    width: 100%;
-    overflow: hidden;
-  }
-  form .textarea textarea{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    color: #eee;
-    border: 1px solid #333;
-    background: #DEB887;
-    padding: 10px;
-    font-size: 17px;
-    resize: none;
-  }
-  .textarea textarea:focus{
-    border-color: #444;
-  }
-  form .btn{
-    height: 45px;
-    width: 100%;
-    margin: 15px 0;
-  }
-  form .btn button{
-    height: 100%;
-    width: 100%;
-    border: 1px solid #444;
-    outline: none;
-    background: #30D5C8;
-    color: #999;
-    font-size: 17px;
-    font-weight: 500;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  form .btn button:hover{
-    background: #DEB887;
-  }
+<!-- Start of body content specific to page -->
 
-</style>
+</html>
