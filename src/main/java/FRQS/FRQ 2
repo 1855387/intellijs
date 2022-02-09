@@ -1,0 +1,33 @@
+public class Invitation {
+
+  private String hostName;
+  private String address;
+  private String invitation;
+
+  public Invitation(String n, String a) {
+    hostName = n;
+    address = a;
+  }
+ //part d
+  public Invitation (String a) {
+    address = a;
+    hostName = "Host";
+  }
+  //part a
+  public String toString() {
+    return hostName;
+  }
+
+  //part b
+  public void updateAddress(String newAdress) {
+    address = newAdress;
+    System.out.println("The new address is " + address);
+  }
+
+  //part c
+  public String invitePerson(String invitee) {
+    invitation = "Dear " + invitee + ", please attend my event at " + address + ". See you then, " + hostName + ".";
+    return invitation;
+  }
+
+}
