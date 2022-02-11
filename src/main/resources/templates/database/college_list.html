@@ -182,7 +182,29 @@
 
         <!-- Slideshow -->
         <div>
+          <div id ="gradient" >
+            <p class ="title" >College Application Service</p>
+          </div>
 
+          <div class="slideshow-container" id="position6">
+
+
+            <div class="mySlides fade">
+              <img  class="dimensions" src="/image" th:src="@{/image}" alt="menu" >
+            </div>
+
+            <div class="mySlides fade">
+              <img   class="dimensions" src="/image" th:src="@{/image}" alt="menu">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div style="text-align:center" id="position7">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
         </div>
 
         <!-- End of body content specific to page -->
