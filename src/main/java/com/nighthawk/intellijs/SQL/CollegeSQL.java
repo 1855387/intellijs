@@ -17,7 +17,7 @@ public class CollegeSQL {
         return jpa.findAll();
     }
 
-       // custom query to find anything containing term in name or email ignoring case
+
     public  List<College>listLikeNative(String term) {
         String like_term = String.format("%%%s%%",term);  // Like required % rappers
         return jpa.findByLikeTermNative(like_term);
@@ -25,6 +25,7 @@ public class CollegeSQL {
 
     public void save(College college) {
         jpa.save(college);
+
     }
 
     public College get(long id) {

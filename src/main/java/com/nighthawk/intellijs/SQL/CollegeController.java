@@ -20,6 +20,13 @@ public class CollegeController implements WebMvcConfigurer {
         @Autowired
         private CollegeSQL repository;
 
+        @GetMapping(value="/database/college_faq")
+        public String college_faq(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+            // @RequestParam handles required and default values, name and model are class variables, model looking like JSON
+            model.addAttribute("name", name); // MODEL is passed to html
+            return "/database/college_faq";
+        }
+
         @GetMapping(value = "/database/college_list")
         public String college(Model model) {
             List<College> list = repository.listAll();
