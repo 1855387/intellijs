@@ -1,14 +1,15 @@
 package FRQS;
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
+
 // Write a Class Number
-public class Number {
+public class Number2 {
     // instance variables
 
     // Number has a zero Argument constructor
     // It initializes a random number between 3 and 36, ie the number of squirrels in class
-    public Number() {
+    public Number2() {
         // constructor
     }
     public int getNumber(){
@@ -27,19 +28,19 @@ public class Number {
     public static void main(String[] args) {
 
         // Create an ArrayList of Type Number, my ArrayList is called squirrels
-        ArrayList squirrels = new ArrayList<Number>();
+        ArrayList squirrels = new ArrayList<Number2>();
         // Initialize 10 squirrels of class type Number
         // Insert Number instance into ArrayList Squirrel in least to greatest order by random number, mine required nested loops
-        Number sq1 = new Number();
-        Number sq2 = new Number();
-        Number sq3 = new Number();
-        Number sq4 = new Number();
-        Number sq5 = new Number();
-        Number sq6 = new Number();
-        Number sq7 = new Number();
-        Number sq8 = new Number();
-        Number sq9 = new Number();
-        Number sq10 = new Number();
+        Number2 sq1 = new Number2();
+        Number2 sq2 = new Number2();
+        Number2 sq3 = new Number2();
+        Number2 sq4 = new Number2();
+        Number2 sq5 = new Number2();
+        Number2 sq6 = new Number2();
+        Number2 sq7 = new Number2();
+        Number2 sq8 = new Number2();
+        Number2 sq9 = new Number2();
+        Number2 sq10 = new Number2();
         sq1.getNumber();
         sq2.getNumber();
         sq3.getNumber();
@@ -66,6 +67,44 @@ public class Number {
 
         // Print a formatted message with number of Squirrels and Index by which they were created, use enhanced for loop
         System.out.println(squirrels);
+=======
+import FRQS.string;
+
+import java.util.ArrayList;
+
+// Write a Class Number
+public class Number {
+    private string odd;
+    private string even;
+
+    private ArrayList<String> squirrels;
+    int randomNum = (int)(Math.random() * 33) + 3;
+    public Number(string s, string r, int z) {
+        odd=s;
+        even=r;
+        randomNum=z;
+
+    }
+
+    public Number() {
+        squirrels = new ArrayList<>();
+    }
+
+    public ArrayList<String> getSquirrel() {
+        return squirrels;
+    }
+
+    public void setSquirrels(ArrayList<String> newSquirrels) {
+        this.squirrels = newSquirrels;
+    }
+
+    public static void main(String[] args) {
+
+        String[] used = {"squirrel1", "squirrel2", "squirrel3", "squirrel4", "squirrel5", "squirrel6", "squirrel7", "squirrel8", "squirrel9", "squirrel10"};
+        Squirrel squirrel1 = new Squirrel("Squirrel1", "Squirrel2");
+        System.out.println("Original list" + squirrel1);
+
+>>>>>>> origin/main
     }
 
 }
