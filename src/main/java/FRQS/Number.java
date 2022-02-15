@@ -1,5 +1,7 @@
 package FRQS;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 // Write a Class Number
 public class Number {
     // instance variables
@@ -9,7 +11,12 @@ public class Number {
     public Number() {
         // constructor
     }
-
+    public int getNumber(){
+        int min = 3;
+        int max = 36;
+        int number = (int)(Math.random()*(max-min+1)+min);
+        return number;
+    }
     // It contains a getter for the Random Number
 
 
@@ -20,7 +27,7 @@ public class Number {
     public static void main(String[] args) {
 
         // Create an ArrayList of Type Number, my ArrayList is called squirrels
-        ArrayList<Number> squirrels = new ArrayList<Number>();
+        ArrayList squirrels = new ArrayList<Number>();
         // Initialize 10 squirrels of class type Number
         // Insert Number instance into ArrayList Squirrel in least to greatest order by random number, mine required nested loops
         Number sq1 = new Number();
@@ -33,11 +40,32 @@ public class Number {
         Number sq8 = new Number();
         Number sq9 = new Number();
         Number sq10 = new Number();
+        sq1.getNumber();
+        sq2.getNumber();
+        sq3.getNumber();
+        sq4.getNumber();
+        sq5.getNumber();
+        sq6.getNumber();
+        sq7.getNumber();
+        sq8.getNumber();
+        sq9.getNumber();
+        sq10.getNumber();
+        squirrels.add(sq1);
+        squirrels.add(sq2);
+        squirrels.add(sq3);
+        squirrels.add(sq4);
+        squirrels.add(sq5);
+        squirrels.add(sq6);
+        squirrels.add(sq7);
+        squirrels.add(sq8);
+        squirrels.add(sq9);
+        squirrels.add(sq10);
+
+        Collections.sort(squirrels);
+
 
         // Print a formatted message with number of Squirrels and Index by which they were created, use enhanced for loop
-        for (Number i: squirrels){
-            System.out.println(i);
-        }
+        System.out.println(squirrels);
     }
 
 }
