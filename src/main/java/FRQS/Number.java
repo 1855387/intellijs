@@ -1,5 +1,4 @@
-package com.nighthawk.csa.starters.squirrel;
-
+package FRQS;
 import FRQS.string;
 
 import java.util.ArrayList;
