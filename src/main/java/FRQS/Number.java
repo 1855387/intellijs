@@ -14,30 +14,27 @@ public class Number {
     public Number(string s, string r, int z) {
         odd=s;
         even=r;
+        randomNum=z;
 
     }
 
+    public Number() {
+        squirrels = new ArrayList<>();
+    }
 
+    public ArrayList<String> getSquirrel() {
+        return squirrels;
+    }
 
+    public void setSquirrels(ArrayList<String> newSquirrels) {
+        this.squirrels = newSquirrels;
+    }
 
-    // It contains a getter for Index, or the order it was initialized
-public int getRandomNum()
-{
-    return randomNum;
-}
-// ak was here
-
-    // Write a tester method
     public static void main(String[] args) {
 
-
-        // Create an ArrayList of Type Number, my ArrayList is called squirrels
-
-        // Initialize 10 squirrels of class type Number
-        // Insert Number instance into ArrayList Squirrel in least to greatest order by random number, mine required nested loops
-
-
-        // Print a formatted message with number of Squirrels and Index by which they were created, use enhanced for loop
+        String[] used = {"squirrel1", "squirrel2", "squirrel3", "squirrel4", "squirrel5", "squirrel6", "squirrel7", "squirrel8", "squirrel9", "squirrel10"};
+        Squirrel squirrel1 = new Squirrel("Squirrel1", "Squirrel2");
+        System.out.println("Original list" + squirrel1);
 
     }
 
