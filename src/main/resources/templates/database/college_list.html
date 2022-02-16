@@ -225,17 +225,16 @@
             var dots = document.getElementsByClassName("dot");
             if (n > slides.length) {slideIndex = 1}
             if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++){
+            for (i = 0; i <= slides.length; i++){
               slides[i].style.display = "none";
             }
-            for (i = 0; i < dots.length; i++){
+            for (i = 0; i <= dots.length; i++){
               dots[i].className = dots[i].className.replace(" active", "");
             }
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
           }
         </script>
-
 
         <!-- End of body content specific to page -->
       </div></body>
@@ -246,125 +245,3 @@
 </div>
 
 </html>
-
-<style>
-
-  #position7{
-    bottom:0;
-    /*position:absolute*/
-  }
-  #position6{
-    /*position:absolute;*/
-    top:650px;
-    right:30px;
-    background-color: #2eccba;
-    border:50px solid #2eccba;
-    display:flex;
-    justify-content:center;
-  }
-
-
-
-  .title{
-    text-align: center;
-    font-size: 45px;
-    font-family: "Monotype Corsiva";
-    color: #B69F5F;
-    line-height: 250px;
-  }
-
-
-  * {box-sizing: border-box}
-  body {
-    font-family: Verdana, sans-serif;
-    margin:0;
-    overflow-x:hidden;
-
-  }
-  .mySlides, .quote {display: none}
-
-  /* Slideshow container */
-  .slideshow-container {
-    width: 50%;  /*largest photo is 2110px wide and 1600px tall*/
-    height:700px;
-    /*position: absolute;*/
-    padding:10px;
-  }
-  .slideshow-container2{
-    width:35%;
-    position:absolute;
-    height:100px;
-    top:1800px;
-    right:5%;
-    font-family: Georgia;
-  }
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    /*position: absolute;*/
-    top: 100%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: black;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-
-  /* Position the "next button" to the right */
-  .next {
-    right:-4%;
-    border-radius: 3px 0 0 3px;
-    /*position:absolute;*/
-  }
-  .prev{
-    /*position:absolute;*/
-    right:100%;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-    color:white;
-  }
-
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-
-  /* Fading animation */
-  .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-    /*        animation: fade ease 4s;
-            animation-iteration-count:1;
-            animation-fill-mode: forwards; */
-  }
-
-  @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-
-</style>
