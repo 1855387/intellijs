@@ -34,4 +34,3 @@ Ak Prathipati | [Link](https://github.com/yajatyadav/intellijs/commit/7b31523e7e
 Test- database branch
 ### Week 4 (1/3 - 1/7)
 
-![](https://cdn.discordapp.com/attachments/564886315997462528/943701044381224960/unknown.png)
