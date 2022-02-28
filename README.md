@@ -212,6 +212,9 @@ $blue: #2541b2;
 - Main commands are sudo git pull to update and sudo mvn package to initalize/deploy 
 
 #### Async Operation (ie JavaScript fetch) described in GitHub pages
+![image](https://cdn.discordapp.com/attachments/832027121932697602/947896270394118154/unknown.png)
+- Use a Javascript method for searching
+- The function masks certain results based on user input and doesn't require refreshing the page
 
 <br/>
 ### Week 3 (12/13-12/17) About pages + Unit 3 FRQ  
