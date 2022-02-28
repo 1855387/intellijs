@@ -100,9 +100,9 @@
                 "December",
             ];
 
-            document.querySelector(".date h1").innerHTML = months[date.getMonth()];
+            document.querySelector(".date h1").innerHTML = months[date.getMonth()]; //dynamically displays the month/ header
 
-            document.querySelector(".date p").innerHTML = new Date().toDateString();
+            document.querySelector(".date p").innerHTML = new Date().toDateString(); //dynamically displays the actual date in the p header for HTML innerHTML allows for this in both
 
             let days = "";
 

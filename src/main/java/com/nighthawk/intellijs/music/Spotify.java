@@ -4,6 +4,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,6 +16,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Random;
 
+@Controller
 public class Spotify {
     public JSONObject Spotify_data() throws IOException, InterruptedException, ParseException {
         HttpRequest request = HttpRequest.newBuilder()
@@ -32,7 +34,7 @@ public class Spotify {
 
 
 
-        JSONObject song = (JSONObject) songs.get((int) Math.random() * 79);
+        JSONObject song = (JSONObject) songs.get( (int) (Math.random()*30));
 
         return (JSONObject) song.get("track");
 
@@ -49,11 +51,16 @@ public class Spotify {
 
         String song = (String) output.get("name");
         String song_link = (String) (((JSONObject) output.get("external_urls")).get("spotify"));
-        String artist = "test_artist";
+//        String song_link = "test_link";
+//        String artist = "test_artist";
+        String[] array = song_link.split("/");
+        String stringer = array[4];
+        stringer = "https://open.spotify.com/embed/track/" + stringer;
 
         model.addAttribute("song", song);
         model.addAttribute("song_link", song_link);
-        model.addAttribute("artist", artist);
+        model.addAttribute("id", stringer);
+//        model.addAttribute("artist", artist);
 
         return "music"; // returns HTML VIEW (greeting)
     }
@@ -61,7 +68,13 @@ public class Spotify {
  public static void main(String[] args) throws IOException, InterruptedException, ParseException {
         Spotify test = new Spotify();
         JSONObject output = test.Spotify_data();
-        System.out.println(output.get("name"));
+     String song = (String) output.get("name");
+     String song_link = (String) (((JSONObject) output.get("external_urls")).get("spotify"));
+     String[] array = song_link.split("/");
+     String stringer = array[4];
+     stringer = "https://open.spotify.com/embed/track/" + stringer;
+
+     System.out.println(stringer);
  }
 
 
