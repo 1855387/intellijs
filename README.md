@@ -35,6 +35,7 @@ Our wiki offers in-depth documentation for various aspects of our project.
 
 #### Async Operation (ie JavaScript fetch) described in GitHub pages
 
+<br/>
 ### Week 3 (12/13-12/17) About pages + Unit 3 FRQ  
 [Review ticket](https://github.com/yajatyadav/intellijs/issues/10)  
 
