@@ -26,12 +26,29 @@ Our wiki offers in-depth documentation for various aspects of our project.
 ### Week 11 PBL Final
 
 #### PBL theme consistent through project and described in Github Pages
-Our PBL theme is a college application service for students, including features such as deadlines, due dates, and application fees. Our features include thge use a database of college application information to create features such as a calendar with deadlines, FAQ's with a search function, and a slideshow of colleges with additional information. In addition, students can log in and set colleges they're interested in applying to, opening a page with information specific to them and being able to opt to get notifications for upcoming deadlines.
-
 
 #### Sassy / Bootstrap illustration in GitHub pages
- - Sass partials are utilized within our project here:
+ - Sass partials are utilized within our project to organize the project below
 ![dwankawkldnalwdlkwandklawjdklajdlkwajdlajwldjalwd](https://user-images.githubusercontent.com/72889453/149645411-25d66017-4dd9-4fa5-8728-2f92cc38eac9.png)
+ - Variable assignment are done below, so that the hexadecimal value of the colors don't need to be needlessly retyped:
+``` scss
+$light: #f7f7f7;
+$dark: #222121;
+$lime: #00cc66;
+$orangeRed: #fb4b4e;
+$blue: #2541b2;
+```
+* Example shown here:
+``` scss
+.navbar {
+  background: $light; // see how instead of having to retype the hexadecimal, I can just reference it like this WOWOW so COOL
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1200px) / 2);
+  z-index: 10;
+  position: relative;
+```
 
 
 #### Database - CRUD operations on project centered database tables and describe in GitHub Pages
