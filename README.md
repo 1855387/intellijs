@@ -28,6 +28,7 @@ Our wiki offers in-depth documentation for various aspects of our project.
 #### PBL theme consistent through project and described in Github Pages
 Our PBL theme is a college application service for students, including features such as deadlines, due dates, and application fees. Our features include thge use a database of college application information to create features such as a calendar with deadlines, FAQ's with a search function, and a slideshow of colleges with additional information. In addition, students can log in and set colleges they're interested in applying to, opening a page with information specific to them and being able to opt to get notifications for upcoming deadlines.
 
+![image](https://user-images.githubusercontent.com/55672662/156019614-9648d4db-f99e-4ada-8460-40500dabb2eb.png)
 
 #### Sassy / Bootstrap illustration in GitHub pages
  - Sass partials are utilized within our project to organize the project below
