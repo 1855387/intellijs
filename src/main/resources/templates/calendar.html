@@ -47,7 +47,14 @@
             <div class="days"></div>
         </div>
     </div>
+
+
+
     <script>
+        // const deadlines = [[${list}]];
+
+
+
 
         const date = new Date();
 
@@ -109,7 +116,11 @@
                     date.getMonth() === new Date().getMonth()
                 ) {
                     days += `<div class="today">${i}</div>`;
-                } else {
+                }
+
+
+                else if (i == 28){days += `<div class="deadline">${i}</div>`;}
+                else {
                     days += `<div>${i}</div>`;
                 }
             }
@@ -242,6 +253,12 @@
         .today {
             background-color: #167e56;
         }
+
+        .deadline {
+            background-color: #ff4400;
+        }
+
+
     </style>
 </div>
 </html>
