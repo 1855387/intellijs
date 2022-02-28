@@ -51,7 +51,139 @@ $blue: #2541b2;
   z-index: 10;
   position: relative;
 ```
+- Nested styling is used within our project below in the hero section of the SCSS:
+``` scss
+.hero {
+  background-color: $light; // see how the rest of the code is indented within .hero
 
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    height: 90vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    @include tablet { // these will be explained next
+      grid-template-columns: 1fr;
+      height: 100%;
+    }
+
+    &--left {
+      width: 100%;
+      line-height: 1.2;
+
+      @include tablet {
+        padding: 5rem 0;
+      }
+
+      @include mobile {
+        line-height: 1.5;
+      }
+    }
+
+    &--left h1 {
+      font-size: 4rem;
+      color: $lime;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--left h2 {
+      font-size: 4rem;
+      color: $dark;
+
+      @include mobile {
+        font-size: 2rem;
+      }
+    }
+
+    &--left p {
+      font-size: 2rem;
+      color: $dark;
+      margin-top: 1rem;
+      font-weight: 700;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--btn {
+      font-size: 1rem;
+      background-color: $lime;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 4px;
+      color: $light;
+      margin-top: 2rem;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s;
+      outline: none;
+    }
+
+    &--btn a {
+      position: relative;
+      z-index: 2;
+      color: $light;
+      text-decoration: none;
+    }
+
+    &--btn:after { // code animates home page button so that it transitions to red when hovered
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: $orangeRed;
+      transition: all 0.3s;
+      border-radius: 4px;
+    }
+
+    &--btn:hover:after {
+      width: 100%;
+    }
+
+    &--right {
+      text-align: center;
+    }
+
+    &--img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+```
+* You can see how this code works in tandem with the Hero section of the HTML, the class definitions are associated with every definition of styling coded above:
+``` html
+<!-- Hero Section -->
+<div class="hero"> // each of the classes here correspond to what's defined above in the scss
+    <div class="hero__container">
+        <div class="hero__container--left">
+            <h1>College Apps Are Coming!</h1>
+            <h2>Be Prepared</h2>
+            <p>Sign up now to join the list.</p>
+            <button class="hero__container--btn"><a href="#">Sign Up</a></button>
+        </div>
+        <div class="hero__container--right">
+            <img
+                    src="images/img-2.svg"
+                    class="hero__container--img"
+            />
+        </div>
+    </div>
+</div>
+```
 
 #### Database - CRUD operations on project centered database tables and describe in GitHub Pages
 
