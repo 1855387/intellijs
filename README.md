@@ -187,6 +187,26 @@ $blue: #2541b2;
 ```
 
 #### Database - CRUD operations on project centered database tables and describe in GitHub Pages
+- details
+- 2
+- 3
+- 
+
+![image] (https://cdn.discordapp.com/attachments/832027121932697602/947756191998685234/unknown.png)
+- Webpage displaying the college list, with options to add, update, and delete colleges
+- Used Bootstrap and Sassy when designing the page
+
+![image](https://media.discordapp.net/attachments/832027121932697602/947756317878132766/unknown.png)
+- This is our POJO
+- contains an generated id, a String for college name, and Date for deadline
+
+![image] (https://cdn.discordapp.com/attachments/832027121932697602/947756264593711114/unknown.png)
+- these are the methods for performing all of the CRUD operations
+
+![image] (https://cdn.discordapp.com/attachments/832027121932697602/947756395359526942/unknown.png)
+- using thymeleaf (th:each and th:text) to generate the table containing all the college info
+
+
 
 #### Deployed Project 24/7 - Deployment Overview and Policies described in GitHub Pages
 ![image](https://user-images.githubusercontent.com/72889343/156019173-4323bb30-3d15-4591-9bb7-d8f6ff86a439.png)
