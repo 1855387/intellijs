@@ -23,6 +23,18 @@ Our wiki offers in-depth documentation for various aspects of our project.
 #### [Project Theme + Technicals](https://github.com/yajatyadav/intellijs/wiki/Project-Theme---Technicals)  
 <br/>
 
+### Week 11 PBL Final
+
+#### PBL theme consistent through project and described in Github Pages
+
+#### Sassy / Bootstrap illustration in GitHub pages
+
+#### Database - CRUD operations on project centered database tables and describe in GitHub Pages
+
+#### Deployed Project 24/7 - Deployment Overview and Policies described in GitHub Pages
+
+#### Async Operation (ie JavaScript fetch) described in GitHub pages
+
 ### Week 3 (12/13-12/17) About pages + Unit 3 FRQ  
 [Review ticket](https://github.com/yajatyadav/intellijs/issues/10)  
 
