@@ -4,12 +4,12 @@
 <th:block xmlns:th="http://www.w3.org/1999/xhtml" th:fragment="header">
     <link rel="stylesheet" href="/styles/nav_style.css" />
     <nav class="navbar">
-        <a href="/home" class="navbar__logo">SECRET</a>
+        <a href="/" class="navbar__logo">SECRET</a>
         <div class="navbar__bars"><i class="fas fa-bars"></i></div>
         <div class="navbar__menu">
 
             <a th:href="@{/database/college_list}" class="navbar__menu--links">My College List</a>
-            <a href="/" class="navbar__menu--links">Services</a>
+            <a th:href="@{/calendar}" class="navbar__menu--links">College Calendar</a>
             <a href="https://kylem314.github.io" class="navbar__menu--links">Jekyll</a>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -17,7 +17,7 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                     <a th:href="@{/charlie_about}" class="dropdown-item" type="button" >Charlie's page</a>
-                    <a class="dropdown-item" type="button" href="/">Another action</a>
+                    <a th:href="@{/yajat_about}"class="dropdown-item" type="button" href="/">Yajat's page</a>
                     <a class="dropdown-item" type="button">Something else here</a>
                     <a class="dropdown-item" type="button">Something else here</a>
                     <a class="dropdown-item" type="button">Something else here</a>
@@ -26,53 +26,43 @@
 
             <div>
                 <div class="btn-group">
-                    <!-- Dark mode action -->
-                    <div class="form-check form-switch">
-                        <input type="checkbox" onclick="darkFunction()" class="form-check-input" id="darkSwitch">
-                        <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+                    <!-- Search Box -->
+                    <div class="px-3">
+                        <input id="search" type="search" placeholder="Google Search" aria-label="Search">
                     </div>
                 </div>
 
                 <!-- Navigation bar JavaScript support -->
                 <script>
-                    // Dark Mode Control
-                    // darkSwitch global element is set for convenience
-                    const darkSwitch=document.getElementById("darkSwitch");
-                    // establishes the initial state of darkSwitch on page load
-                    if(darkSwitch) {
-                        // obtains the value of darkSwitch from localStorage
-                        const darkSwitchSelected =
-                            localStorage.getItem("darkSwitch") !== null &&
-                            localStorage.getItem("darkSwitch") === "dark";
-                        // sets the value of darkSwitch.checked to the global darkSwitch
-                        darkSwitch.checked=darkSwitchSelected;
-                        // if dark-mode, toggle the switch to dark-mode position
-                        if (darkSwitchSelected)
-                            document.body.classList.toggle("dark-mode");
-                    }
-                    // executes on each "dark mode" UI toggle
-                    function darkFunction() {
-                        // toggles between off (standard CSS) and dark-mode (.dark-mode CSS)
-                        document.body.classList.toggle("dark-mode");
-                        // localStorage is used to manage darkSwitch status
-                        darkSwitch.checked
-                            ? localStorage.setItem("darkSwitch","dark")
-                            : localStorage.removeItem("darkSwitch");
-                    }
-                    // End Dark Mode Control
+                    const search = document.getElementById('search');
+                    const google = 'https://www.google.com/search?q=site%3A+';
+                    const site = 'https://intellijs.cf';
 
+                    function submitted(event) {
+                        if (event.key === 'Enter') {
+                            // calculations to determine new window size at 66% of existing
+                            const reduction = 0.66;  // reduce by 66%
+                            const w = Math.trunc(window.innerWidth*reduction);
+                            const h = Math.trunc(window.outerHeight*reduction);
+                            const l = Math.trunc(window.top.screenX + ((window.innerWidth - w)/2));
+                            const t = Math.trunc(window.top.screenY + ((window.outerHeight - h)/2));
+                            const left = "left=" + l;
+                            const top = "top=" + t;
+                            const width = "width=" + w;
+                            const height = "height=" + h;
+                            const location = left + ", " + top + ", " + width + ", " + height
 
-                    // Clock Control
-                    // clockElement global element set for convenience
-                    let clockElement = document.getElementById('clock');
-                    // Clock update executes on each interval set by timer
-                    function clock() {
-                        let date = new Date();
-                        clockElement.textContent = date.toLocaleString();
+                            // setup and display window
+                            event.preventDefault();
+                            const url = google
+                                + site
+                                + '+'
+                                + search.value;
+                            const win = window.open(url, "CompSci A Search", location);
+                            win.focus();
+                        }
                     }
-                    // Clock refresh timer, a reoccurring event
-                    setInterval(clock, 1000);
-                    // End Clock Control
+                    search.addEventListener('keypress', submitted);
                 </script>
                 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

@@ -27,6 +27,11 @@ public class CollegeController implements WebMvcConfigurer {
             return "/database/college_faq";
         }
 
+
+
+
+
+
         @GetMapping(value = "/database/college_list")
         public String college(Model model) {
             List<College> list = repository.listAll();

@@ -1,6 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<div layout:fragment="head" th:remove="tag">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -11,32 +15,36 @@
     />
     <link rel="stylesheet" href="./styles/styles.css" />
     <title>P1 Intellijs</title>
-</head>
-<body>
+</div>
+
+
+<div layout:fragment="body" th:remove="tag">
 <!-- Navbar Section -->
-<nav class="navbar">
-    <a href="/home" class="navbar__logo">SECRET</a>
-    <div class="navbar__bars"><i class="fas fa-bars"></i></div>
-    <div class="navbar__menu">
 
-<!--        <li class="nav-item dropdown">-->
-<!--            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink0" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
-<!--                College Pages-->
-<!--            </a>-->
-<!--            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">-->
-<!--                <li><a class="dropdown-item" th:href="@{/database/college_list}"> My College List</a></li>-->
-<!--                <li><a class="dropdown-item" th:href="@{/database/college_add}">Add a College</a></li>-->
-<!--                <li><a class="dropdown-item" th:href="@{/database/college_update}">Update/Delete a College</a></li>-->
-<!--                <li><a class="dropdown-item" th:href="@{/database/college_search}">Search your College List</a></li>-->
 
-<!--            </ul>-->
-<!--        </li>-->
+<!--<nav class="navbar">-->
+<!--    <a href="/home" class="navbar__logo">SECRET</a>-->
+<!--    <div class="navbar__bars"><i class="fas fa-bars"></i></div>-->
+<!--    <div class="navbar__menu">-->
 
-        <a th:href="@{/database/college_list}" class="navbar__menu--links">My College List</a>
-        <a href="https://yajatyadav.github.io/intellijs/" class="navbar__menu--links">Github Pages</a>
-        <a href="@{/database/college_faq}" class="navbar__menu--links" id="button">Sign Up</a>
-    </div>
-</nav>
+<!--&lt;!&ndash;        <li class="nav-item dropdown">&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink0" role="button" data-bs-toggle="dropdown" aria-expanded="false">&ndash;&gt;-->
+<!--&lt;!&ndash;                College Pages&ndash;&gt;-->
+<!--&lt;!&ndash;            </a>&ndash;&gt;-->
+<!--&lt;!&ndash;            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a class="dropdown-item" th:href="@{/database/college_list}"> My College List</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a class="dropdown-item" th:href="@{/database/college_add}">Add a College</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a class="dropdown-item" th:href="@{/database/college_update}">Update/Delete a College</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li><a class="dropdown-item" th:href="@{/database/college_search}">Search your College List</a></li>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;        </li>&ndash;&gt;-->
+
+<!--        <a th:href="@{/database/college_list}" class="navbar__menu&#45;&#45;links">My College List</a>-->
+<!--        <a href="https://yajatyadav.github.io/intellijs/" class="navbar__menu&#45;&#45;links">Github Pages</a>-->
+<!--        <a href="@{/database/college_faq}" class="navbar__menu&#45;&#45;links" id="button">Sign Up</a>-->
+<!--    </div>-->
+<!--</nav>-->
 
 <!-- Hero Section -->
 <div class="hero">
@@ -55,7 +63,66 @@
         </div>
     </div>
 </div>
-</body>
+
+    <a th:href="${music}"> Listen to some relaxing music!</a>
+
+    <!-- Slideshow -->
+    <div>
+        <div id ="gradient" >
+            <p class ="title" >Your Colleges</p>
+        </div>
+
+        <div class="slideshow-container" id="position6">
+
+
+            <div class="mySlides fade">
+                <img  class="dimensions" src="/static/images/delnorte.jpg" th:src="@{/images/delnorte.jpg}" alt="menu" >
+            </div>
+
+            <div class="mySlides fade">
+                <img   class="dimensions" src="/static/images/delnorte.jpg" th:src="@{/images/delnorte.jpg}" alt="menu">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div style="text-align:center" id="position7">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n){
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n){
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i <= slides.length; i++){
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i <= dots.length; i++){
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+</div>
 </html>
 
 
