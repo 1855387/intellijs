@@ -189,8 +189,11 @@ $blue: #2541b2;
 #### Database - CRUD operations on project centered database tables and describe in GitHub Pages
 
 #### Deployed Project 24/7 - Deployment Overview and Policies described in GitHub Pages
-- Directions:
 ![image](https://user-images.githubusercontent.com/72889343/156019173-4323bb30-3d15-4591-9bb7-d8f6ff86a439.png)
+- These are the cmd steps that allow you to update and deploy your website using AWS
+- Must first create a key on the AWS console 
+- Can then use their example ssh when following these steps to simply update and deploy the website
+- Main commands are sudo git pull to update and sudo mvn package to initalize/deploy 
 
 #### Async Operation (ie JavaScript fetch) described in GitHub pages
 
